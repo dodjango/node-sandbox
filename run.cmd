@@ -9,5 +9,5 @@ docker run^
   -w "/usr/src/app"^
   --name "sandbox"^
   -v "%CD%":/usr/src/app^
-  sandbox^
+  node-sandbox^
   node %*

@@ -1,3 +1,3 @@
 @ECHO OFF
 
-docker build -t  sandbox .
+docker build -t  node-sandbox .
