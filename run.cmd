@@ -7,7 +7,7 @@ docker run^
   -u "node"^
   -m "300M" --memory-swap "1G"^
   -w "/usr/src/app"^
-  --name "sandbox"^
+  --name "node-sandbox"^
   -v "%CD%":/usr/src/app^
   node-sandbox^
   node %*
