@@ -1,9 +1,14 @@
-FROM node:8
+FROM node:latest
 
-EXPOSE 8888
+# ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
 
-# global no
-ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
+RUN apt-get update && apt-get upgrade -y && apt-get install -y \
+  apt-utils \
+  git \
+  less \
+  vim \
+  telnet
 
-# run unprivileged
-USER node
+EXPOSE 8080
+
+CMD [ "npm", "install" ]

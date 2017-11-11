@@ -9,5 +9,6 @@ docker run^
   -w "/usr/src/app"^
   --name "node-sandbox"^
   -v "%CD%":/usr/src/app^
-  node-sandbox^
+  -p 49160:8080^
+  dodjango/node-sandbox^
   node %*
