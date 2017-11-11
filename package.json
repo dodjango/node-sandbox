@@ -1,0 +1,13 @@
+{
+  "name": "sandbox-node-docker-app",
+  "version": "1.0.0",
+  "description": "Sandbox for Node.js on Docker",
+  "author": "Torsten Mattetat <dodjango@planetdjango.de>",
+  "main": "sandbox.js",
+  "scripts": {
+    "start": "node sandbox.js"
+  },
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
