@@ -1,3 +1,3 @@
 @ECHO OFF
 
-docker build -t  dodjango/node-sandbox .
+docker build -t dodjango/node-sandbox .
