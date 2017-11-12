@@ -18,6 +18,9 @@ $ ./runREPL.sh
 > process.exit(42);
 hello world
 undefined
+> console.log(module.id);
+<repl>
+undefined
 > process.exit(42);
 node  FAILED with 42;
 ```
