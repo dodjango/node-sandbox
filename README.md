@@ -3,32 +3,43 @@
 playing around with node using a docker container to run the scripts
 
 ## create docker image
-```PowerShell
-> build
+```Bash
+$ ./build.sh
+```
+check with
+```Bash
+$ docker images
 ```
 
 ## basic REPL usage
-```PowerShell
-> runREPL
+```Bash
+$ ./runREPL.sh
 > console.log("hello world");
+> process.exit(42);
 hello world
 undefined
+> process.exit(42);
+node  FAILED with 42;
 ```
 
 ## basic usage
 ### run script in docker container
-npm install is performed before launching node
-```PowerShell
-> run simple_web_server.js
-werb server is running
+npm install is performed automatically before launching node
+```Bash
+$ ./run.sh fs-samples/fs-read-write.js
+hello world
+```
+check with
+```Bash
+$ docker ps
 ```
 
 ### stop docker container
-```PowerShell
-> stop
+```Bash
+$ ./stop.sh
 ```
 
 ### kill docker container
-```PowerShell
-> kill
+```Bash
+$ ./kill.sh
 ```
