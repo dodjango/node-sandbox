@@ -30,6 +30,7 @@ docker run \
   dodjango/node-sandbox \
   node $*
 
-if [ ! $? -eq 0 ]; then
-	echo "node $* FAILED";
+EXITCODE=$?
+if [ ! $EXITCODE -eq 0 ]; then
+	echo "node $* FAILED with $EXITCODE";
 fi
