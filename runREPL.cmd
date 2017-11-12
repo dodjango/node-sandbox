@@ -12,3 +12,5 @@ docker run^
   -p 49160:8080^
   dodjango/node-sandbox^
   node %*
+
+if not %errorlevel%==0 echo node %* FAILED with %errorlevel%
