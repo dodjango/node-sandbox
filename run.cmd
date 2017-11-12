@@ -11,7 +11,7 @@ docker run^
   -v "%CD%":/usr/src/app^
   -p 49160:8080^
   dodjango/node-sandbox^
-  bash start_sandbox.sh %*
+  bash sandbox/start_sandbox.sh %*
 
 IF ERRORLEVEL 1 GOTO END
 docker logs -f node-sandbox
