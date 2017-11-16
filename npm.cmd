@@ -1,5 +1,6 @@
 @ECHO OFF
 
+REM *** start container attached
 docker run^
   -it^
   --rm^
@@ -11,6 +12,4 @@ docker run^
   -v "%CD%":/usr/src/app^
   -p 49160:8080^
   dodjango/node-sandbox^
-  node %*
-
-if not %errorlevel%==0 echo node %* FAILED with %errorlevel%
+  npm %*

@@ -1,19 +1,25 @@
 # node-sandbox
 
+## Bash
+
 playing around with node using a docker container to run the scripts
 
-## create docker image
-```Bash
-$ ./build.sh
-```
-check with
-```Bash
-$ docker images
+### create docker image
+
+```bash
+./build.sh
 ```
 
-## basic REPL usage
+check with
+
+```bash
+docker images
+```
+
+### REPL usage
+
 ```Bash
-$ ./runREPL.sh
+./node.sh
 > console.log("hello world");
 > process.exit(42);
 hello world
@@ -22,27 +28,40 @@ undefined
 <repl>
 undefined
 > process.exit(42);
-node  FAILED with 42;
 ```
 
-## basic usage
-### run script in docker container
-npm install is performed automatically before launching node
+### basic usage
+
+#### run script in docker container
+
 ```Bash
-$ ./run.sh fs-samples/fs-read-write.js
+./node.sh fs-samples/fs-read-write.js
 hello world
 ```
-check with
+
+#### stop docker container
+
 ```Bash
-$ docker ps
+./stop.sh
 ```
 
-### stop docker container
+#### kill docker container
+
 ```Bash
-$ ./stop.sh
+./kill.sh
 ```
 
-### kill docker container
-```Bash
-$ ./kill.sh
+## Windows Command Line
+
+Nearly all Bash scripts are also available as windows batch script.
+
+### Using slashes
+
+In order to launch a script file in a sub folder you have to use slashes instead of backslashes as path delimiter. The script arguments are passed to the node process running in the linux container and need linux style.
+
+```batch
+npm.cmd install
+up to date in 0.494s
+node.cmd fs-samples/fs-read-write.js
+hello world
 ```

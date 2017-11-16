@@ -16,9 +16,9 @@ if [[ "$machine" = "Cygwin" || "$machine" = "MinGw" ]]; then
   WINPWD=$(cygpath.exe -w $PWD)
 fi
 
-# *** start container detached
+# *** start container attached
 docker run \
-  -d \
+  -it \
   --rm \
   -e "NODE_ENV=production" \
   -u "node" \
@@ -28,10 +28,3 @@ docker run \
   -v $WINPWD:/usr/src/app \
   dodjango/node-sandbox \
   npm $*
-
-# *** show logs of running or error message of failed container
-if [ $? -eq 0 ]; then
-	docker logs -f node-sandbox
-else
-	echo $0 $1 FAILED
-fi
