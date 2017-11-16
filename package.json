@@ -4,6 +4,11 @@
   "description": "Sandbox for Node.js on Docker",
   "author": "Torsten Mattetat <dodjango@planetdjango.de>",
   "main": "sandbox.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dodjango/node-sandbox.git"
+  },
   "scripts": {
     "start": "node sandbox.js"
   },
