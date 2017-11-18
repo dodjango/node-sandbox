@@ -26,5 +26,6 @@ docker run \
   -w //usr/src/app \
   --name "node-sandbox" \
   -v $WINPWD:/usr/src/app \
+  --entrypoint npm \
   dodjango/node-sandbox \
-  npm $*
+  $*

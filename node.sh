@@ -27,5 +27,6 @@ docker run \
   --name "node-sandbox" \
   -v $WINPWD:/usr/src/app \
   -p 49160:8080 \
+  --entrypoint node \
   dodjango/node-sandbox \
-  node $*
+  $*
