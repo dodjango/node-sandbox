@@ -21,18 +21,21 @@ RUN apt-get install -y \
     apt-get autoremove
 
 # Create a nonroot user, and switch to it
-RUN  /usr/sbin/useradd --create-home --home-dir /home/node --shell /bin/bash node 
-RUN chown -R node /usr/src
+RUN useradd --create-home --home-dir /home/node --shell /bin/bash node && \
+    chown -R node /usr/src && \
+    echo "root:Docker!" | chpasswd && \
+    mkdir /home/node/.npm-global && \
+    chown -R node /home/node && \
+    npm config set prefix /home/node/.npm-global
 
 # Switch to our nonroot user
 USER node
 
-RUN mkdir /home/node/.npm-global
 ENV HOME /home/node
-ENV NODE_PATH /home/node/node_modules
+ENV NODE_PATH /usr/src/app
 ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
 
-WORKDIR /home/node
+WORKDIR /usr/src/app
 
 RUN npm install -g typescript types tslint karma-cli grunt-cli gulp-cli @angular/cli
 
