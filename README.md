@@ -19,7 +19,7 @@ To add a global modulelike jshint you can use this script. This script will inst
 
 ### create docker image
 
-The first thing you have to do is to build the container image or to download id by pulling dodjango/node-sandbox from docker hub.
+The first thing you have to do is to build the container image or to download it by pulling dodjango/node-sandbox from docker hub.
 
 ```bash
 ./build.sh
