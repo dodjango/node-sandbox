@@ -1,6 +1,6 @@
 # node-sandbox
 
-This sandbox allows you to start a node or a npm process whithin a docker container but it feels like it were on your machine. There are to script node.sh and npm.sh or node.cmd and npm.cmd working as the executable.
+This sandbox allows you to start a node or a npm process whithin a docker container but it feels like it were on your machine. The scripts node.sh and npm.sh or node.cmd and npm.cmd work as the executable.
 
 ## Global npm modules
 
