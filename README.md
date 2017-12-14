@@ -4,7 +4,7 @@ This sandbox allows you to start a node or a npm process whithin a docker contai
 
 ## Global npm modules
 
-Some global moduls are installed like grunt-cli, angular-cli and so on. Please check the Dockerfile to see the modules list.
+Some global modules are installed like grunt-cli, angular-cli and so on. Please check the Dockerfile to see the modules list.
 The node and npm scripts create the docker container ad hoc and will remove it after the process exits. Therefore the container is stateless and installing global modules needs to create a new docker image.
 
 ### add more global modules
