@@ -37,7 +37,7 @@ ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
 
 WORKDIR /usr/src/app
 
-RUN npm install -g typescript types tslint karma-cli grunt-cli gulp-cli @angular/cli
+RUN npm install -g typescript types tslint karma-cli grunt-cli gulp-cli @angular/cli jshint
 
 EXPOSE 8080
 
