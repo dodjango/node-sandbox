@@ -18,7 +18,7 @@ RUN apt-get install -y \
      && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
      && \
-    apt-get autoremove
+    apt-get autoclean
 
 # Create a nonroot user, and switch to it
 RUN useradd --create-home --home-dir /home/node --shell /bin/bash node && \
