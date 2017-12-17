@@ -9,6 +9,10 @@
     "type": "git",
     "url": "https://github.com/dodjango/node-sandbox.git"
   },
+  "bugs": {
+    "url" : "https://github.com/dodjango/node-sandbox/issues",
+    "email" : "dertorsten@planetdjango.de"
+  },
   "scripts": {
     "start": "node sandbox.js"
   },
