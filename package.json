@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "express": "^4.13.3",
-    "fs-extra": "^5.0.0"
+    "fs-extra": "^5.0.0",
+    "mssql": "^4.1.0"
   }
 }
