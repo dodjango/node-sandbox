@@ -21,5 +21,8 @@
     "fs-extra": "^5.0.0",
     "mssql": "^4.1.0",
     "url": "^0.11.0"
+  },
+  "devDependencies": {
+    "jshint": "^2.9.5"
   }
 }
