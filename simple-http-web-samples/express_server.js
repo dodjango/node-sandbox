@@ -13,6 +13,11 @@
     res.send('Hello world\n');
     console.log(req.headers);
   });
+
+  process.on('SIGINT', (e) => {
+    console.log('\n...exiting');
+    process.exit();
+  });
   
   app.listen(PORT, HOST);
   console.log(`Running on http://${HOST}:${PORT}`);  
